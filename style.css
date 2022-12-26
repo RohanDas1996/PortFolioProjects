@@ -11,6 +11,10 @@
     padding: 0;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 /* ==================NAVBAR================= */
 
 .Navbar{
@@ -30,20 +34,32 @@
 }
 .Navbar-List{
     width: 50%;
+    height: 37px;
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
     list-style: none;
+    margin-left: -18px;
+}
+.Navbar-List li{
+    border: 1px solid black;
+    transition: 0.6s ease;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    border-radius: 4px;
 }
 .Navbar-List li a{
     text-decoration: none;
-    color: black;
-    padding: 8px 25px;
-    border: 1px solid black;
-    transition: 0.6s ease;
-    border-radius: 4px;
+    color: black; 
+    position: relative;
+    top: 6px;
 }
-.Navbar-List li a:hover{
+.Navbar-List li:hover{
     background-color: black;
+    cursor: pointer;
+}
+.Navbar-List li:hover>a{
     color: white;
 }
 
@@ -54,6 +70,7 @@
 .Header{
     background-image: url(./Images/Header-Images/HeaderImage.jpeg);
     height: 60vh;
+    width: 100%;
     background-size: cover;
     background-position: center;
     margin-top: -60px;
@@ -175,7 +192,7 @@
     border-radius: 150px;
 }
 .Menu-Description{
-    width: 40%;
+    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -234,7 +251,7 @@
     font-size: 30px;
     font-family: Arial, Helvetica, sans-serif;
 }
-.Servive-Middle{
+.Service-Middle{
     width: 8%;
     display: flex;
     justify-content: center;
@@ -374,3 +391,194 @@
 span{
     color: red;
 }
+
+
+.line{
+    width: 50px;
+    height: 3px;
+    background-color: black;
+    margin: 9px;
+}
+.burger{
+    display: none;
+    cursor: pointer;
+}
+
+
+/* ================================MEDIA QUERY========================================== */
+
+
+@media only screen and (max-width: 1140px){
+    .Navbar-List{
+        flex-direction: column;
+        align-items: flex-end;
+        background-color: white;
+        opacity: 0.9;
+        height: 210px;
+        position: relative;
+        top: 135px;
+        right: -6px;
+        width: 30%;
+        display: none;
+    }
+    .Navbar-List li{
+        border: 1px solid black;
+        width: 97%;
+        position: relative;
+        left: -1px;
+    }
+    .Navbar-Logo{
+        width: 70%;
+    }
+    .Header-Title h1{
+        width: 245px;
+        position: relative;
+        right: 110px;
+    }
+    .Header{
+        height: 55vh;
+        width: 100%;
+    }
+    .Header-Button{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: 50px;
+        right: 130px;
+    }
+    .About-Image img{
+        width: 170px;
+        height: 200px;
+        margin-left: -20px;
+        margin-top: -20px;
+    }
+    .About-Content{
+        width: 60%;
+        height: 100px;
+        margin-left: 10px;
+        margin-right: 20px;
+        margin-top: -250px;
+    }
+    .About-Image{
+        width: 40%;
+    }
+    .About-Content p{
+        width: 460px;
+    }
+    .About-Container{
+        height: 470px;
+    }
+    .Menu-Heading{
+        margin-left: 30%;
+    }
+    .Menu-Container{
+        height: 1200px;
+        flex-direction: column;
+    }
+    .Menu-Leftside{
+        width: 100%;
+        height: 600px;
+    }
+    .Menu-Rightside{
+        width: 100%;
+        height: 600px;
+    }
+    .Menu-Content{
+        height: 200px;
+    }
+    .Menu-Image img{
+        height: 180px;
+        width: 180px;
+    }
+    .Service-Heading{
+        margin-left: 26%;
+    }
+    .Service-Container{
+        flex-direction: column;
+        height: 420px;
+    }
+    .Service-Left{
+        width: 100%;
+        height: 180px;
+    }
+    .Service-Left img{
+        width: 150px;
+        height: 150px;
+    }
+    .Content-Left{
+        margin-top: -115px;
+        height: 100px;
+    }
+    .Content-Left h1{
+        font-size: 27px;
+    }
+    .Service-Middle{
+        width: 100%;
+        height: 60px;
+        font-size: 40px;
+    }
+    .Service-Right{
+        width: 100%;
+        height: 180px;
+    }
+    .Service-Right img{
+        width: 150px;
+        height: 150px;
+    }
+    .Service-Container button{
+        width: 160px;
+        height: 43px;
+    }
+    .Content-Right{
+        margin-top: -115px;
+        height: 100px;
+    }
+    .Content-Right h1{
+        font-size: 27px;
+    }
+    .Contact-Container{
+        height: 300px;
+        margin-bottom: 50px;
+    }
+    .Contact-Image{
+        width: 50%;
+    }
+    .Contact-Image img{
+        width: 225px;
+        height: 235px;
+    }
+    .Contact-Form{
+        width: 50%;
+        margin-left: -8px;
+        margin-top: -3px;
+    }
+    .Contact-Form input{
+        width: 220px;
+        height: 20px;
+        margin-top: 5%;
+    }
+    .Contact-Form textarea{
+        width: 220px;
+        height: 60px;
+        margin-top: 5%;
+    }
+    .Contact-Form h1{
+        margin-top: 24px;
+    }
+    .Contact-Form button{
+        margin-top: 7%;
+    }
+    .burger{
+        display: block;
+        position: absolute;
+        right: 7px;
+    }
+    .burger:hover{
+        background-color: black;
+        transition: 0.6s ease;
+    }
+    .burger:hover .line{
+        background-color: white;
+    }
+}
+
